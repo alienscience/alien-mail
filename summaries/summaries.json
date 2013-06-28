@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "from": "Prof Xavier",
+        "subject" : "Save the world",
+        "standfirst" : "It is very important to save the world..."
+    },
+    {
+        "id": 2,
+        "from": "Dr Evil",
+        "subject" : "Do not save the world",
+        "standfirst" : "€10 reward if you let the world explode..."
+    },
+    {
+        "id": 3,
+        "from": "Mr Poor",
+        "subject" : "I need €10 for a cup of tea",
+        "standfirst" : "Can you spare some cash. I spent my money on crack."
+    },
+    {
+        "id": 4,
+        "from": "Ms Lazy",
+        "subject" : "The World is Safe",
+        "standfirst" : "I read it on the interweb. There is nothing to see."
+    },
+    {
+        "id": 5,
+        "from": "Mr Viagra",
+        "subject" : "Spam is boring",
+        "standfirst" : "XXX pharmacy rolex."
+    },
+    {
+        "id": 6,
+        "from": "Mr Pirate",
+        "subject" : "I downloaded a car",
+        "standfirst" : "That was one heavy torrent."
+    }
+]
