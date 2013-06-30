@@ -8,7 +8,38 @@
   <link rel="stylesheet" href="email.css">
 </head>
 <body>
-  <div ng-view></div>
+  
+<div class="pure-g-r content" id="layout">
+    <div class="pure-u" id="nav">
+        <a href="#nav" class="nav-menu-button">Menu</a>
+
+        <div class="nav-inner">
+            <button class="pure-button primary-button" id="email-compose-button">Compose</button>
+
+            <div class="pure-g" id="email-search">
+                <form class="pure-form">
+                    <input type="search" placeholder="search" size=7>
+                </form>
+            </div>
+
+            <div class="pure-menu pure-menu-open">
+                <ul>
+                    <li><a href="#">Inbox <span class="email-count">(2)</span></a></li>
+                    <li><a href="#">Important</a></li>
+                    <li><a href="#">Sent</a></li>
+                    <li><a href="#">Drafts</a></li>
+                    <li><a href="#">Trash</a></li>
+                    <li class="pure-menu-heading">Labels</li>
+                    <li><a href="#"><span class="email-label-important"></span>Important</a></li>
+                    <li><a href="#"><span class="email-label-unread"></span>Unread</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-g" ng-view></div>
+
+</div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>

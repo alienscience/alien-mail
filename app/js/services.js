@@ -3,8 +3,8 @@
 /* Services */
 
 angular.module('alienMail.services', ['ngResource']).
-    factory('Summaries', function($resource){
-        return $resource('/summaries/summaries.json', {}, {
-            query: {method:'GET', params:{}, isArray:true}
+    factory('Messages', function($resource){
+        return $resource('/messages/:messageId.json', {}, {
+            query: {method:'GET', params:{messageId:'summaries'}, isArray:true}
         });
     });
