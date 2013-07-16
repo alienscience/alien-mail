@@ -18,15 +18,16 @@
     <div class="pure-u" id="main" ng-hide="compose">
             <div class="email-content pure-g">
                 <div class="email-content-header pure-g">
-                    <div class="pure-u-1-2">
+                    <div class="pure-u-1">
                         <h1 class="email-content-title">{{message.subject}}</h1>
                         <p class="email-content-subtitle">
                             From <a>{{message.from}}</a> at <span>{{message.date}}</span>
                         </p>
                     </div>
 
-                    <div class="pure-u-1-2 email-content-controls">
+                    <div class="pure-u-1 email-content-controls">
                         <button class="pure-button secondary-button" ng-click="composeReply(message)">Reply</button>
+                        <button class="pure-button secondary-button" ng-click="composeReply(message)">Reply to All</button>
                         <button class="pure-button secondary-button">Forward</button>
                         <button class="pure-button secondary-button">Move to</button>
                     </div>
@@ -42,24 +43,21 @@
     <div class="pure-u" id="main" ng-show="compose">
             <div class="email-content pure-g">
                 <div class="email-content-header pure-g">
-                    <div class="pure-u-1-2">
-                        <h1 class="email-content-title">Re: {{message.subject}}</h1>
+                    <div class="pure-u-1">
+                        <h1 class="email-content-title" contenteditable="true">Re: {{message.subject}}</h1>
                         <p class="email-content-subtitle">
                             From <a>me</a>
                         </p>
                     </div>
 
-                    <div class="pure-u-1-2 email-content-controls">
+                    <div class="pure-u-1 email-content-controls">
                         <button class="pure-button secondary-button">Cancel</button>
                         <button class="pure-button secondary-button">Send</button>
                         <button class="pure-button secondary-button">Save draft</button>
                     </div>
                 </div>
 
-                <!-- TODO: find out why ng-html-bind is not working -->
-                <div class="email-content-body pure-u-1" id="message-body">
-                  <div class="email-compose" contenteditable="true">Hello world,</div>
-                </div>
+                <div class="email-content-body pure-u-1" contenteditable="true" id="email-editor">Hello world,</div>
             </div>
         </div>
     </div>

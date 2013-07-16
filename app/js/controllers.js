@@ -8,17 +8,21 @@ angular.module('alienMail.controllers', []).
 
       // Function that selects a message when a summary is clicked
       $scope.selectMessage = function(summary) {
-          if ($scope.selected) {
-              $scope.selected.unread = 0;
-          }
           $scope.compose = false;
           $scope.selected = summary;
+          $scope.selected.unread = 0;
           $scope.message = Messages.get({messageId: 'message' + summary.id});
       }
 
       // Function that composes a message when the reply button is clicked
       $scope.composeReply = function(message) {
           $scope.compose = true;
+          editor = $('#email-editor');
+          $('#email-editor').keydown(function(e){
+              if (e.keyCode == 9) {
+                  e.preventDefault();
+              }
+          });
       }
 
       // Function that handles keypresses in the compose mail editable div
