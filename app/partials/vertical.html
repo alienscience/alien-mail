@@ -27,9 +27,15 @@
 
                     <div class="pure-u-1 email-content-controls">
                         <button class="pure-button secondary-button" ng-click="composeReply(message)">Reply</button>
-                        <button class="pure-button secondary-button" ng-click="composeReply(message)">Reply to All</button>
-                        <button class="pure-button secondary-button">Forward</button>
-                        <button class="pure-button secondary-button">Move to</button>
+                        <button class="pure-button secondary-button" ng-click="composeReplyAll(message)">Reply to All</button>
+                        <button class="pure-button secondary-button" ng-click="composeForward(message)">Forward</button>
+                        <button class="pure-button secondary-button" ng-click="moveMessage(message)">{{moveButtonText}}</button>
+                        <div class="pure-menu pure-menu-open" ng-show="move">
+                             <ul>
+                               <li><a href="#">Important</a></li>
+                               <li><a href="#">Other</a></li>
+                             </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -51,9 +57,9 @@
                     </div>
 
                     <div class="pure-u-1 email-content-controls">
-                        <button class="pure-button secondary-button">Cancel</button>
-                        <button class="pure-button secondary-button">Send</button>
-                        <button class="pure-button secondary-button">Save draft</button>
+                        <button class="pure-button secondary-button" ng-click="cancelCompose()">Cancel</button>
+                        <button class="pure-button secondary-button" ng-click="send()">Send</button>
+                        <button class="pure-button secondary-button" ng-click="saveDraft()">Save draft</button>
                     </div>
                 </div>
 
